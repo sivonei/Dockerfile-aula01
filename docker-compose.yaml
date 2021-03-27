@@ -4,7 +4,7 @@ services:
   websergo:
     build: .
     ports:
-      - 8080:80
+      - 8080:8080
 
   nginx:
     image: nginx
@@ -12,6 +12,7 @@ services:
       - ./nginx:/usr/share/nginx/html
     ports:
       - 8888:80
+
   redis:
     image: redis:alpine
     expose:
